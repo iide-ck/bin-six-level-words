@@ -1,0 +1,46 @@
+/* 自定义样式 */
+body {
+    background: url('https://img-baofun.zhhainiao.com/fs/c3dcbd173c34f1888be016596944ba48.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(243, 244, 246, 0.8); /* 淡化背景图片 */
+  }
+  
+  .content-container {
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景色，提高可读性 */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .word-display {
+    font-size: 2em;
+    color: #1a202c;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 100px; /* 增大气泡大小 */
+    height: 100px; /* 增大气泡大小 */
+    animation: rise 10s linear infinite, changeOpacity 2s ease-in-out infinite;
+  }
+  
+  @keyframes rise {
+    0% { bottom: 0; transform: scale(1); }
+    50% { bottom: 100vh; transform: scale(1.2); }
+    100% { bottom: 0; transform: scale(1); }
+  }
+  
+  @keyframes changeOpacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .bubble-clicked {
+    animation: clicked 1s ease-in-out forwards;
+  }
+  
+  @keyframes clicked {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 1; }
+  }

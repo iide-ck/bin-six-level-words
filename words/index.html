@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>随机单词生成器</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="relative flex flex-col items-center justify-center min-h-screen py-12">
+<h1 class="text-3xl font-bold mb-4">随机单词生成器</h1>
+<div class="max-w-md w-full content-container">
+  <input type="file" id="fileInput" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 mb-4">
+  <button id="generateButton" class="w-full bg-blue-500 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">生成新单词</button>
+  <div class="word-display text-center p-4" id="wordDisplay">请选择文件以开始</div>
+</div>
+
+<!-- 定义气泡形状 -->
+<svg style="display: none;">
+  <symbol id="bubble1" viewBox="0 0 100 100">
+    <path d="M50 10 C 15 10, 15 50, 50 50 C 85 50, 85 10, 50 10 Z" />
+  </symbol>
+  <symbol id="bubble2" viewBox="0 0 100 100">
+    <path d="M50 10 C 20 10, 20 50, 50 50 C 80 50, 80 10, 50 10 Z" />
+  </symbol>
+  <symbol id="bubble3" viewBox="0 0 100 100">
+    <path d="M50 10 C 25 10, 25 50, 50 50 C 75 50, 75 10, 50 10 Z" />
+  </symbol>
+  <symbol id="bubble4" viewBox="0 0 100 100">
+    <path d="M50 10 C 30 10, 30 50, 50 50 C 70 50, 70 10, 50 10 Z" />
+  </symbol>
+</svg>
+
+<script src="app.js"></script>
+</body>
+</html>
